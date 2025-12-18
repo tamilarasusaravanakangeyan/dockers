@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: langfuse-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: langfuse
+      POSTGRES_PASSWORD: langfuse
+      POSTGRES_DB: langfuse
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: langfuse-clickhouse
+    restart: always
+    environment:
+      CLICKHOUSE_DB: langfuse
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+
+  langfuse:
+    image: ghcr.io/langfuse/langfuse:latest
+    container_name: langfuse
+    depends_on:
+      - postgres
+      - clickhouse
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://langfuse:langfuse@postgres:5432/langfuse
+      CLICKHOUSE_URL: http://clickhouse:8123
+      CLICKHOUSE_MIGRATION_URL: http://clickhouse:9000
+      NEXTAUTH_SECRET: super-secret-change-me
+      SALT: another-secret-change-me
+      NEXTAUTH_URL: http://localhost:3000
+      TELEMETRY_ENABLED: "false"
+
+volumes:
+  postgres_data:
+  clickhouse_data:

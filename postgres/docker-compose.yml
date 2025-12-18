@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16 # Specifies the PostgreSQL image and version
+    restart: always # Ensures the container restarts automatically
+    env_file:
+      - .env
+    ports:
+      - "5432:5432" # Maps host port 5432 to container port 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Persists data in a named volume
+
+volumes:
+  pgdata: # Defines the named volume for data persistence

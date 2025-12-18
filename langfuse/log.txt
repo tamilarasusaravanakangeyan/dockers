@@ -1,0 +1,1319 @@
+2025-12-15 23:42:27 Script executed successfully.
+2025-12-15 23:42:30 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:42:30 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:42:31 
+2025-12-15 23:42:31 363 migrations found in prisma/migrations
+2025-12-15 23:42:31 
+2025-12-15 23:42:32 Applying migration `20230518191501_init`
+2025-12-15 23:42:32 Applying migration `20230518193415_add_observaionts_and_traces`
+2025-12-15 23:42:32 Applying migration `20230518193521_changes`
+2025-12-15 23:42:32 Applying migration `20230522092340_add_metrics_and_observation_types`
+2025-12-15 23:42:32 Applying migration `20230522094431_endtime_optional`
+2025-12-15 23:42:32 Applying migration `20230522131516_default_timestamp`
+2025-12-15 23:42:32 Applying migration `20230523082455_rename_metrics_to_gradings`
+2025-12-15 23:42:32 Applying migration `20230523084523_rename_to_score`
+2025-12-15 23:42:32 Applying migration `20230529140133_user_add_pw`
+2025-12-15 23:42:32 Applying migration `20230530204241_auth_api_ui`
+2025-12-15 23:42:32 Applying migration `20230618125818_remove_status_from_trace`
+2025-12-15 23:42:32 Applying migration `20230620181114_restructure`
+2025-12-15 23:42:32 Applying migration `20230622114254_new_oservations`
+2025-12-15 23:42:32 Applying migration `20230623172401_observation_add_level_and_status_message`
+2025-12-15 23:42:32 Applying migration `20230626095337_external_trace_id`
+2025-12-15 23:42:32 Applying migration `20230705160335_add_created_updated_timestamps`
+2025-12-15 23:42:32 Applying migration `20230706195819_add_completion_start_time`
+2025-12-15 23:42:32 Applying migration `20230707132314_traces_project_id_index`
+2025-12-15 23:42:33 Applying migration `20230707133415_user_add_email_index`
+2025-12-15 23:42:33 Applying migration `20230710105741_added_indices`
+2025-12-15 23:42:33 Applying migration `20230710114928_traces_add_user_id`
+2025-12-15 23:42:33 Applying migration `20230710200816_scores_add_comment`
+2025-12-15 23:42:33 Applying migration `20230711104810_traces_add_index`
+2025-12-15 23:42:33 Applying migration `20230711110517_memberships_add_userid_index`
+2025-12-15 23:42:33 Applying migration `20230711112235_fix_indices`
+2025-12-15 23:42:33 Applying migration `20230717190411_users_feature_flags`
+2025-12-15 23:42:33 Applying migration `20230720162550_tokens`
+2025-12-15 23:42:33 Applying migration `20230720164603_migrate_tokens`
+2025-12-15 23:42:33 Applying migration `20230720172051_tokens_non_null`
+2025-12-15 23:42:33 Applying migration `20230721111651_drop_usage_json`
+2025-12-15 23:42:33 Applying migration `20230731162154_score_value_float`
+2025-12-15 23:42:33 Applying migration `20230803093326_add_release_and_version`
+2025-12-15 23:42:33 Applying migration `20230809093636_remove_foreign_keys`
+2025-12-15 23:42:33 Applying migration `20230809132331_add_project_id_to_observations`
+2025-12-15 23:42:33 Applying migration `20230810191452_traceid_nullable_on_observations`
+2025-12-15 23:42:33 Applying migration `20230810191453_project_id_not_null`
+2025-12-15 23:42:33 Applying migration `20230814184705_add_viewer_membership_role`
+2025-12-15 23:42:33 Applying migration `20230901155252_add_pricings_table`
+2025-12-15 23:42:33 Applying migration `20230901155336_add_pricing_data`
+2025-12-15 23:42:33 Applying migration `20230907204921_add_cron_jobs_table`
+2025-12-15 23:42:33 Applying migration `20230907225603_projects_updated_at`
+2025-12-15 23:42:33 Applying migration `20230907225604_api_keys_publishable_to_public`
+2025-12-15 23:42:33 Applying migration `20230910164603_cron_add_state`
+2025-12-15 23:42:33 Applying migration `20230912115644_add_trace_public_bool`
+2025-12-15 23:42:33 Applying migration `20230918180320_add_indices`
+2025-12-15 23:42:33 Applying migration `20230922030325_add_observation_index`
+2025-12-15 23:42:33 Applying migration `20230924232619_datasets_init`
+2025-12-15 23:42:33 Applying migration `20230924232620_datasets_continued`
+2025-12-15 23:42:33 Applying migration `20231004005909_add_parent_observation_id_index`
+2025-12-15 23:42:33 Applying migration `20231005064433_add_release_index`
+2025-12-15 23:42:33 Applying migration `20231009095917_add_ondelete_cascade`
+2025-12-15 23:42:33 Applying migration `20231012161041_add_events_table`
+2025-12-15 23:42:33 Applying migration `20231014131841_users_add_admin_flag`
+2025-12-15 23:42:33 Applying migration `20231018130032_add_per_1000_chars_pricing`
+2025-12-15 23:42:33 Applying migration `20231019094815_add_additional_secret_key_column`
+2025-12-15 23:42:33 Applying migration `20231021182825_user_emails_all_lowercase`
+2025-12-15 23:42:33 Applying migration `20231025153548_add_headers_to_events`
+2025-12-15 23:42:33 Applying migration `20231030184329_events_add_index_on_projectid`
+2025-12-15 23:42:34 Applying migration `20231104004529_scores_add_index`
+2025-12-15 23:42:34 Applying migration `20231104005403_fkey_indicies`
+2025-12-15 23:42:34 Applying migration `20231106213824_add_openai_models`
+2025-12-15 23:42:34 Applying migration `20231110012457_observation_created_at`
+2025-12-15 23:42:34 Applying migration `20231110012829_observation_created_at_index`
+2025-12-15 23:42:34 Applying migration `20231112095703_observations_add_unique_constraint`
+2025-12-15 23:42:34 Applying migration `20231116005353_scores_unique_id_projectid`
+2025-12-15 23:42:34 Applying migration `20231119171939_cron_add_job_started_at`
+2025-12-15 23:42:34 Applying migration `20231119171940_bookmarked`
+2025-12-15 23:42:34 Applying migration `20231129013314_invites`
+2025-12-15 23:42:34 Applying migration `20231130003317_trace_session_input_output`
+2025-12-15 23:42:34 Applying migration `20231204223505_add_unit_to_observations`
+2025-12-15 23:42:34 Applying migration `20231223230007_cloud_config`
+2025-12-15 23:42:34 Applying migration `20231223230008_accounts_add_cols_azure_ad_auth`
+2025-12-15 23:42:34 Applying migration `20231230151856_add_prompt_table`
+2025-12-15 23:42:34 Applying migration `20240103135918_add_pricings`
+2025-12-15 23:42:34 Applying migration `20240104210051_add_model_indices`
+2025-12-15 23:42:34 Applying migration `20240104210052_add_model_indices_pricing`
+2025-12-15 23:42:34 Applying migration `20240105010215_add_tags_in_traces`
+2025-12-15 23:42:34 Applying migration `20240105170551_index_tags_in_traces`
+2025-12-15 23:42:34 Applying migration `20240106195340_drop_dataset_status`
+2025-12-15 23:42:34 Applying migration `20240111152124_add_gpt_35_pricing`
+2025-12-15 23:42:34 Applying migration `20240117151938_traces_remove_unique_id_external`
+2025-12-15 23:42:34 Applying migration `20240117165747_add_cost_to_observations`
+2025-12-15 23:42:34 Applying migration `20240118204639_add_models_table`
+2025-12-15 23:42:34 Applying migration `20240118204936_add_internal_model`
+2025-12-15 23:42:34 Applying migration `20240118204937_add_observations_view`
+2025-12-15 23:42:34 Applying migration `20240118235424_add_index_to_models`
+2025-12-15 23:42:34 Applying migration `20240119140941_add_tokenizer_id`
+2025-12-15 23:42:34 Applying migration `20240119164147_make_model_params_nullable`
+2025-12-15 23:42:34 Applying migration `20240119164148_add_models`
+2025-12-15 23:42:34 Applying migration `20240124140443_session_composite_key`
+2025-12-15 23:42:34 Applying migration `20240124164148_correct_models`
+2025-12-15 23:42:34 Applying migration `20240126184148_new_models copy`
+2025-12-15 23:42:34 Applying migration `20240130100110_usage_unit_nullable`
+2025-12-15 23:42:34 Applying migration `20240130160110_claude_models`
+2025-12-15 23:42:34 Applying migration `20240131184148_add_finetuned_and_vertex_models`
+2025-12-15 23:42:34 Applying migration `20240203184148_update_pricing`
+2025-12-15 23:42:34 Applying migration `20240212175433_add_audit_log_table`
+2025-12-15 23:42:34 Applying migration `20240213124148_update_openai_pricing`
+2025-12-15 23:42:34 Applying migration `20240214232619_prompts_add_indicies`
+2025-12-15 23:42:34 Applying migration `20240215224148_update_openai_pricing`
+2025-12-15 23:42:34 Applying migration `20240215234937_fix_observations_view`
+2025-12-15 23:42:34 Applying migration `20240219162415_add_prompt_config`
+2025-12-15 23:42:34 Applying migration `20240226165118_add_observations_index`
+2025-12-15 23:42:34 Applying migration `20240226182815_add_model_index`
+2025-12-15 23:42:34 Applying migration `20240226183642_add_observations_index`
+2025-12-15 23:42:34 Applying migration `20240226202040_add_observations_trace_id_project_id_start_time_idx`
+2025-12-15 23:42:34 Applying migration `20240226202041_add_observations_trace_id_project_id_type_start_time_idx`
+2025-12-15 23:42:35 Applying migration `20240226203642_rewrite_observations_view`
+2025-12-15 23:42:35 Applying migration `20240227112101_index_prompt_id_in_observations`
+2025-12-15 23:42:35 Applying migration `20240228103642_observations_view_cte`
+2025-12-15 23:42:35 Applying migration `20240228123642_observations_view_fix`
+2025-12-15 23:42:35 Applying migration `20240304123642_traces_view`
+2025-12-15 23:42:35 Applying migration `20240304123642_traces_view_improvement`
+2025-12-15 23:42:35 Applying migration `20240304222519_scores_add_index`
+2025-12-15 23:42:35 Applying migration `20240305095119_add_observations_index`
+2025-12-15 23:42:35 Applying migration `20240305100713_traces_add_index`
+2025-12-15 23:42:35 Applying migration `20240307090110_claude_model_three`
+2025-12-15 23:42:35 Applying migration `20240307185543_score_add_source_nullable`
+2025-12-15 23:42:35 Applying migration `20240307185544_score_add_name_index`
+2025-12-15 23:42:35 Applying migration `20240307185725_backfill_score_source`
+2025-12-15 23:42:35 Applying migration `20240312195727_score_source_drop_default`
+2025-12-15 23:42:35 Applying migration `20240314090110_claude_model`
+2025-12-15 23:42:35 Applying migration `20240325211959_remove_example_table`
+2025-12-15 23:42:35 Applying migration `20240325212245_dataset_runs_add_metadata`
+2025-12-15 23:42:35 Applying migration `20240326114211_dataset_run_item_bind_to_trace`
+2025-12-15 23:42:35 Applying migration `20240326114337_dataset_run_item_backfill_trace_id`
+2025-12-15 23:42:35 Applying migration `20240326115136_dataset_run_item_traceid_non_null`
+2025-12-15 23:42:35 Applying migration `20240326115424_dataset_run_item_index_trace`
+2025-12-15 23:42:35 Applying migration `20240328065738_dataset_item_input_nullable`
+2025-12-15 23:42:35 Applying migration `20240404203640_dataset_item_source_trace_id`
+2025-12-15 23:42:35 Applying migration `20240404210315_dataset_add_descriptions`
+2025-12-15 23:42:35 Applying migration `20240404232317_dataset_items_backfill_source_trace_id`
+2025-12-15 23:42:35 Applying migration `20240405124810_prompt_to_json`
+2025-12-15 23:42:35 Applying migration `20240408133037_add_objects_for_evals`
+2025-12-15 23:42:35 Applying migration `20240408134328_prompt_table_add_tags`
+2025-12-15 23:42:35 Applying migration `20240408134330_prompt_table_add_index_to_tags`
+2025-12-15 23:42:35 Applying migration `20240411134330_model_updates`
+2025-12-15 23:42:35 Applying migration `20240411194142_update_job_config_status`
+2025-12-15 23:42:35 Applying migration `20240411224142_update_models`
+2025-12-15 23:42:35 Applying migration `20240414203636_ee_add_sso_configs`
+2025-12-15 23:42:35 Applying migration `20240415235737_index_models_model_name`
+2025-12-15 23:42:35 Applying migration `20240416173813_add_internal_model_index`
+2025-12-15 23:42:35 Applying migration `20240417102742_metadata_on_dataset_and_dataset_item`
+2025-12-15 23:42:35 Applying migration `20240419152924_posthog_integration_settings`
+2025-12-15 23:42:35 Applying migration `20240420134232_posthog_integration_created_at`
+2025-12-15 23:42:35 Applying migration `20240423174013_update_models`
+2025-12-15 23:42:35 Applying migration `20240423192655_add_llm_api_keys`
+2025-12-15 23:42:35 Applying migration `20240424150909_add_job_execution_index`
+2025-12-15 23:42:35 Applying migration `20240429124411_add_prompt_version_labels`
+2025-12-15 23:42:35 Applying migration `20240429194411_add_latest_prompt_tag`
+2025-12-15 23:42:35 Applying migration `20240503125742_traces_add_createdat_updatedat`
+2025-12-15 23:42:36 Applying migration `20240503130335_traces_index_created_at`
+2025-12-15 23:42:36 Applying migration `20240503130520_traces_index_updated_at`
+2025-12-15 23:42:36 Applying migration `20240508132621_scores_add_project_id`
+2025-12-15 23:42:36 Applying migration `20240508132735_scores_add_projectid_index`
+2025-12-15 23:42:36 Applying migration `20240508132736_scores_backfill_project_id`
+2025-12-15 23:42:36 Applying migration `20240512151529_rename_memberships_to_project_memberships`
+2025-12-15 23:42:36 Applying migration `20240512155020_rename_enum_membership_role_to_project_role`
+2025-12-15 23:42:36 Applying migration `20240512155021_add_pricing_gpt4o`
+2025-12-15 23:42:36 Applying migration `20240512155021_scores_drop_fk_on_traces_and_observations`
+2025-12-15 23:42:36 Applying migration `20240512155022_scores_non_null_and_add_fk_project_id`
+2025-12-15 23:42:36 Applying migration `20240513082203_scores_unique_id_and_projectid_instead_of_id_and_traceid`
+2025-12-15 23:42:36 Applying migration `20240513082204_scores_unique_id_and_projectid_instead_of_id_and_traceid_index`
+2025-12-15 23:42:36 Applying migration `20240513082205_observations_view_add_time_to_first_token`
+2025-12-15 23:42:36 Applying migration `20240522081254_scores_add_author_user_id`
+2025-12-15 23:42:36 Applying migration `20240522095738_scores_add_author_user_id_index`
+2025-12-15 23:42:36 Applying migration `20240523142425_score_config_add_table`
+2025-12-15 23:42:36 Applying migration `20240523142524_scores_add_config_id_idx`
+2025-12-15 23:42:36 Applying migration `20240523142610_scores_add_fk_scores_config_id`
+2025-12-15 23:42:36 Applying migration `20240524154058_scores_source_enum_add_annotation`
+2025-12-15 23:42:36 Applying migration `20240524156058_scores_source_backfill_annotation_for_review`
+2025-12-15 23:42:36 Applying migration `20240524165931_scores_source_enum_drop_review`
+2025-12-15 23:42:36 Applying migration `20240524190433_job_executions_add_fk_index_config_id`
+2025-12-15 23:42:36 Applying migration `20240524190434_job_executions_add_fk_index_score_id`
+2025-12-15 23:42:36 Applying migration `20240524190435_job_executions_add_fk_index_trace_id`
+2025-12-15 23:42:36 Applying migration `20240524190436_job_executions_index_created_at`
+2025-12-15 23:42:36 Applying migration `20240528214726_add_cursor_new_columns_observations`
+2025-12-15 23:42:36 Applying migration `20240528214727_add_cursor_new_columns_scores`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_01`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_02`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_03`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_04`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_05`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_06`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_07`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_08`
+2025-12-15 23:42:36 Applying migration `20240528214728_add_cursor_index_09`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_10`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_11`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_12`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_13`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_14`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_15`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_16`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_17`
+2025-12-15 23:42:37 Applying migration `20240528214728_add_cursor_index_18`
+2025-12-15 23:42:37 Applying migration `20240603212024_dataset_items_add_index_source_trace_id`
+2025-12-15 23:42:37 Applying migration `20240604133338_scores_add_index_name`
+2025-12-15 23:42:37 Applying migration `20240604133339_score_data_type_add_boolean`
+2025-12-15 23:42:37 Applying migration `20240606093356_drop_unused_pricings_table`
+2025-12-15 23:42:37 Applying migration `20240606133011_remove_trace_fkey_datasetrunitems`
+2025-12-15 23:42:37 Applying migration `20240607090858_pricings_add_latest_gemini_models`
+2025-12-15 23:42:37 Applying migration `20240607212419_model_price_anthropic_via_google_vertex`
+2025-12-15 23:42:37 Applying migration `20240611105521_llm_api_keys_custom_endpoints`
+2025-12-15 23:42:37 Applying migration `20240611113517_backfill_manual_score_configs`
+2025-12-15 23:42:37 Applying migration `20240612101858_add_index_observations_project_id_prompt_id`
+2025-12-15 23:42:37 Applying migration `20240617094803_observations_remove_prompt_fk_constraint`
+2025-12-15 23:42:37 Applying migration `20240618134129_add_batch_exports_table`
+2025-12-15 23:42:37 Applying migration `20240618164950_drop_observations_parent_observation_id_idx`
+2025-12-15 23:42:37 Applying migration `20240618164951_drop_observations_updated_at_idx`
+2025-12-15 23:42:37 Applying migration `20240618164952_drop_scores_updated_at_idx`
+2025-12-15 23:42:37 Applying migration `20240618164953_drop_traces_external_id_idx`
+2025-12-15 23:42:37 Applying migration `20240618164954_drop_traces_release_idx`
+2025-12-15 23:42:37 Applying migration `20240618164955_drop_traces_updated_at_idx`
+2025-12-15 23:42:37 Applying migration `20240618164956_create_traces_project_id_timestamp_idx`
+2025-12-15 23:42:37 Applying migration `20240624133412_models_add_anthropic_3_5_sonnet`
+2025-12-15 23:42:37 Applying migration `20240625103957_observations_add_calculated_cost_columns`
+2025-12-15 23:42:37 Applying migration `20240625103958_fix_model_match_gpt4_vision`
+2025-12-15 23:42:37 Applying migration `20240703214747_models_anthropic_aws_bedrock`
+2025-12-15 23:42:37 Applying migration `20240704103900_observations_view_read_from_calculated`
+2025-12-15 23:42:37 Applying migration `20240704103901_scores_make_value_optional`
+2025-12-15 23:42:37 Applying migration `20240705152639_traces_view_add_created_at_updated_at`
+2025-12-15 23:42:37 Applying migration `20240705154048_observation_view_add_created_at_updated_at`
+2025-12-15 23:42:37 Applying migration `20240710114043_score_configs_drop_empty_categories_array_for_numeric_scores`
+2025-12-15 23:42:37 Applying migration `20240710114044_add_pricing_gpt4o_mini`
+2025-12-15 23:42:37 Applying migration `20240718004923_datasets_tables_add_projectid_composite_key`
+2025-12-15 23:42:37 Applying migration `20240718011733_dataset_runs_add_unique_dataset_id_project_id_name copy`
+2025-12-15 23:42:37 Applying migration `20240718011734_dataset_runs_drop_unique_dataset_id_name`
+2025-12-15 23:42:37 Applying migration `20240718011735_observation_view_add_prompt_name_and_version`
+2025-12-15 23:42:37 Applying migration `20240807111358_models_add_openai_gpt_4o_2024_08_06`
+2025-12-15 23:42:37 Applying migration `20240807111359_add_organizations_main_migration`
+2025-12-15 23:42:37 Applying migration `20240814223824_model_fix_text_embedding_3_large`
+2025-12-15 23:42:37 Applying migration `20240814233029_dataset_items_drop_fkey_on_traces_and_observations`
+2025-12-15 23:42:38 Applying migration `20240815171916_add_comments`
+2025-12-15 23:42:38 Applying migration `20240913095558_models_add_openai_o1_2024-09-12`
+2025-12-15 23:42:38 Applying migration `20240913185822_account_add_refresh_token_expires_in`
+2025-12-15 23:42:38 Applying migration `20240917183001_remove_covered_indexes_01`
+2025-12-15 23:42:38 Applying migration `20240917183002_remove_covered_indexes_02`
+2025-12-15 23:42:38 Applying migration `20240917183003_remove_covered_indexes_03`
+2025-12-15 23:42:38 Applying migration `20240917183004_remove_covered_indexes_04`
+2025-12-15 23:42:38 Applying migration `20240917183005_remove_covered_indexes_05`
+2025-12-15 23:42:38 Applying migration `20240917183006_remove_covered_indexes_06`
+2025-12-15 23:42:38 Applying migration `20240917183007_remove_covered_indexes_07`
+2025-12-15 23:42:38 Applying migration `20240917183008_remove_covered_indexes_08`
+2025-12-15 23:42:38 Applying migration `20240917183009_remove_covered_indexes_09`
+2025-12-15 23:42:38 Applying migration `20240917183010_remove_covered_indexes_10`
+2025-12-15 23:42:38 Applying migration `20240917183011_remove_covered_indexes_11`
+2025-12-15 23:42:38 Applying migration `20240917183012_remove_covered_indexes_12`
+2025-12-15 23:42:38 Applying migration `20240917183013_remove_covered_indexes_13`
+2025-12-15 23:42:38 Applying migration `20240917183014_remove_covered_indexes_14`
+2025-12-15 23:42:38 Applying migration `20240917183015_remove_covered_indexes_15`
+2025-12-15 23:42:38 Applying migration `20240917183016_remove_covered_indexes_16`
+2025-12-15 23:42:38 Applying migration `20241009042557_auth_add_created_at_for_gitlab`
+2025-12-15 23:42:38 Applying migration `20241009110720_scores_add_nullable_queue_id_column`
+2025-12-15 23:42:38 Applying migration `20241009113245_add_annotation_queue`
+2025-12-15 23:42:38 Applying migration `20241010120245_llm_keys_add_config`
+2025-12-15 23:42:38 Applying migration `20241015110145_prompts_config_to_JSON`
+2025-12-15 23:42:38 Applying migration `20241022110145_add_claude_sonnet_35`
+2025-12-15 23:42:38 Applying migration `20241023110145_update_claude_sonnet_35`
+2025-12-15 23:42:38 Applying migration `20241024100928_add_prices_table`
+2025-12-15 23:42:38 Applying migration `20241024111800_add_background_migrations_table`
+2025-12-15 23:42:38 Applying migration `20241024121500_add_generations_cost_backfill_background_migration`
+2025-12-15 23:42:38 Applying migration `20241024173000_add_traces_pg_to_ch_background_migration`
+2025-12-15 23:42:38 Applying migration `20241024173700_add_observations_pg_to_ch_background_migration`
+2025-12-15 23:42:38 Applying migration `20241024173800_add_scores_pg_to_ch_background_migration`
+2025-12-15 23:42:38 Applying migration `20241029130802_prices_drop_excess_index`
+2025-12-15 23:42:38 Applying migration `20241104111600_background_migrations_add_state_column`
+2025-12-15 23:42:38 Applying migration `20241105110900_add_claude_haiku_35`
+2025-12-15 23:42:38 Applying migration `20241106122605_add_media_tables`
+2025-12-15 23:42:38 Applying migration `20241114175010_job_executions_add_observation_dataset_item_cols`
+2025-12-15 23:42:38 Applying migration `20241124115100_add_projects_deleted_at`
+2025-12-15 23:42:38 Applying migration `20241125124029_add_chatgpt_4o_prices`
+2025-12-15 23:42:38 Applying migration `20241206115829_remove_trace_score_observation_constraints`
+2025-12-15 23:42:38 Applying migration `20250108220721_add_queue_backup_table`
+2025-12-15 23:42:38 Applying migration `20250109083346_drop_trace_tracesession_fk`
+2025-12-15 23:42:39 Applying migration `20250116154613_add_billing_meter_backups`
+2025-12-15 23:42:39 Applying migration `20250122152102_add_llm_api_keys_extra_headers`
+2025-12-15 23:42:39 Applying migration `20250123103200_add_retention_days_to_projects`
+2025-12-15 23:42:39 Applying migration `20250128144418_llm_adapter_rename_google_vertex_ai`
+2025-12-15 23:42:39 Applying migration `20250128163035_add_nullable_commit_message_prompts`
+2025-12-15 23:42:39 Applying migration `20250204180200_add_event_log_table`
+2025-12-15 23:42:39 Applying migration `20250211102600_drop_event_log_table`
+2025-12-15 23:42:39 Applying migration `20250211123300_drop_events_table`
+2025-12-15 23:42:39 Applying migration `20250214173309_add_timescope_to_configs`
+2025-12-15 23:42:39 Applying migration `20250220141500_add_environment_to_trace_sessions`
+2025-12-15 23:42:39 Applying migration `20250221143400_drop_trace_view_observation_view`
+2025-12-15 23:42:39 Applying migration `20250303144044_add_prompt_dependencies_table`
+2025-12-15 23:42:39 Applying migration `20250310100328_add_api_key_to_audit_log`
+2025-12-15 23:42:39 Applying migration `20250321102240_drop_queue_backup_table`
+2025-12-15 23:42:39 Applying migration `20250324110557_add_blobstorage_integration_table`
+2025-12-15 23:42:39 Applying migration `20250326180640_add_llm_tools_and_schemas_tables`
+2025-12-15 23:42:39 Applying migration `20250401122159_add_prompt_protected_labels_table`
+2025-12-15 23:42:39 Applying migration `20250402142320_add_blobstorage_integration_file_type`
+2025-12-15 23:42:39 Applying migration `20250403153555_membership_invitations_no_duplicates`
+2025-12-15 23:42:39 Applying migration `20250409154352_add_dashboard_data_model`
+2025-12-15 23:42:39 Applying migration `20250410145712_add_organization_scoped_api_keys`
+2025-12-15 23:42:39 Applying migration `20250420120553_add_organization_and_project_metadata`
+2025-12-15 23:42:39 Applying migration `20250517173700_add_event_log_migration_background_migration.sql`
+2025-12-15 23:42:39 Applying migration `20250517273700_add_table_view_presets.sql`
+2025-12-15 23:42:39 Applying migration `20250519073249_add_trace_media_media_id_index`
+2025-12-15 23:42:39 Applying migration `20250519073327_add_observation_media_media_id_index`
+2025-12-15 23:42:39 Applying migration `20250519093327_media_add_index_project_id_id`
+2025-12-15 23:42:39 Applying migration `20250519093328_media_relax_id_uniqueness_to_project_only`
+2025-12-15 23:42:39 Applying migration `20250519145128_resize_dashboard_y_axis_components`
+2025-12-15 23:42:39 Applying migration `20250520123737_add_single_aggregate_chart_type`
+2025-12-15 23:42:39 Applying migration `20250522140357_remove_obsolete_observation_media_index`
+2025-12-15 23:42:39 Applying migration `20250523100511_add_default_eval_model_table`
+2025-12-15 23:42:39 Applying migration `20250523110540_modify_nullable_cols_eval_templates`
+2025-12-15 23:42:39 Applying migration `20250523120545_add_nullable_job_template_id`
+2025-12-15 23:42:39 Applying migration `20250529071241_make_blobstorage_integration_credentials_optional`
+2025-12-15 23:42:39 Applying migration `20250604085536_add_histogram_chart_type`
+2025-12-15 23:42:39 Applying migration `20250625_add_pivot_table_charttype`
+2025-12-15 23:42:39 Applying migration `20250704170658_add_automations`
+2025-12-15 23:42:39 Applying migration `20250709113103_add_blob_export_schedule_type`
+2025-12-15 23:42:40 Applying migration `20250711105322_prices_add_project_id`
+2025-12-15 23:42:40 Applying migration `20250711134738_add_patch_llm_tool_schema_audit_logs_background_migration`
+2025-12-15 23:42:40 Applying migration `20250714151410_add_trace_session_combined_index`
+2025-12-15 23:42:40 Applying migration `20250714151410_remove_trace_session_created_at_idx`
+2025-12-15 23:42:40 Applying migration `20250714151410_remove_trace_session_project_id_idx`
+2025-12-15 23:42:40 Applying migration `20250714151410_remove_trace_session_updated_at_idx`
+2025-12-15 23:42:40 Applying migration `20250724114251_add_webhooks_datasets`
+2025-12-15 23:42:40 Applying migration `20250724160133_add_session_object_type_annoation_queue_items`
+2025-12-15 23:42:40 Applying migration `20250730100100_add_slack_integration`
+2025-12-15 23:42:40 Applying migration `20250731100100_add_dataset_run_items_pg_to_ch_background_migration`
+2025-12-15 23:42:40 Applying migration `20250731202005_add_trace_deletion_table`
+2025-12-15 23:42:40 Applying migration `20250806100613_add_annotation_queue_assignment_table`
+2025-12-15 23:42:40 Applying migration `20250808081624_add_surveys_table`
+2025-12-15 23:42:40 Applying migration `20250814090100_remove_dataset_run_items_pg_to_ch_background_migration`
+2025-12-15 23:42:40 Applying migration `20250814100100_add_dataset_run_items_rmt_pg_to_ch_background_migration`
+2025-12-15 23:42:40 Applying migration `20250820143856_add_observation_types`
+2025-12-15 23:42:40 Applying migration `20250820143857_optimize_job_execution_indices_drop_job_executions_created_at_idx`
+2025-12-15 23:42:40 Applying migration `20250820143858_optimize_job_execution_indices_drop_job_executions_job_configuration_id_idx`
+2025-12-15 23:42:40 Applying migration `20250820143859_optimize_job_execution_indices_drop_job_executions_job_input_trace_id_idx`
+2025-12-15 23:42:40 Applying migration `20250820143860_optimize_job_execution_indices_drop_job_executions_job_output_score_id_idx`
+2025-12-15 23:42:40 Applying migration `20250820143861_optimize_job_execution_indices_drop_job_executions_updated_at_idx`
+2025-12-15 23:42:40 Applying migration `20250820143862_optimize_job_execution_indices_create_job_executions_project_id_job_configuration_id_job_input_tr_idx`
+2025-12-15 23:42:40 Applying migration `20250822135300_add_dashboard_filters`
+2025-12-15 23:42:40 Applying migration `20250825100104_job_executions_add_input_trace_timestamp`
+2025-12-15 23:42:40 Applying migration `20250925133604_organizations_add_ai_features_enabled`
+2025-12-15 23:42:40 Applying migration `20250930125453_job_executions_add_output_score_index`
+2025-12-15 23:42:40 Applying migration `20251001161539_organization_cloud_billing_cycle_columns`
+2025-12-15 23:42:40 Applying migration `20251002153814_add_backfill_billing_cycle_anchors_background_migration`
+2025-12-15 23:42:40 Applying migration `20251006173445_add_cloud_spend_alerts`
+2025-12-15 23:42:40 Applying migration `20251006173446_optimize_cloud_spend_alerts_add_index`
+2025-12-15 23:42:40 Applying migration `20251013134801_drop_atla_llm_keys`
+2025-12-15 23:42:40 Applying migration `20251014161635_job_executions_add_execution_trace_id`
+2025-12-15 23:42:40 Applying migration `20251024193002_add_mixpanel_integration`
+2025-12-15 23:42:40 Applying migration `20251028143653_add_notification_preferences`
+2025-12-15 23:42:40 Applying migration `20251028143654_add_notification_preferences_redundant_index`
+2025-12-15 23:42:40 Applying migration `20251029000042_add_comment_reactions`
+2025-12-15 23:42:40 Applying migration `20251029000045_add_comment_reaction_idx3`
+2025-12-15 23:42:40 Applying migration `20251104091248_add_dataset_schema_enforcement`
+2025-12-15 23:42:40 Applying migration `20251118153536_add_dataset_item_event_table`
+2025-12-15 23:42:40 Applying migration `20251118162943_add_idx_dataset_item_events`
+2025-12-15 23:42:40 Applying migration `20251126000000_add_comment_search_indexes`
+2025-12-15 23:42:40 Applying migration `20251127105316_add_pricing_tiers`
+2025-12-15 23:42:40 Applying migration `20251127181728_add_prices_index_on_pricing_tier_id`
+2025-12-15 23:42:40 Applying migration `20251201095227_dataset_items_add_version_cols`
+2025-12-15 23:42:40 Applying migration `20251204213345_add_github_dispatch_action_type`
+2025-12-15 23:42:40 Applying migration `20251208121203_dataset_run_items_drop_fk_dataset_items`
+2025-12-15 23:42:40 Applying migration `20251210130559_add_batch_action_table`
+2025-12-15 23:42:41 Applying migration `20251210133946_dataset_items_create_idx_id_project_id_valid_from`
+2025-12-15 23:42:41 Applying migration `20251211204006_dataset_items_switch_pk`
+2025-12-15 23:42:41 
+2025-12-15 23:42:41 The following migration(s) have been applied:
+2025-12-15 23:42:41 
+2025-12-15 23:42:41 migrations/
+2025-12-15 23:42:41   └─ 20230518191501_init/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230518193415_add_observaionts_and_traces/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230518193521_changes/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230522092340_add_metrics_and_observation_types/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230522094431_endtime_optional/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230522131516_default_timestamp/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230523082455_rename_metrics_to_gradings/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230523084523_rename_to_score/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230529140133_user_add_pw/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230530204241_auth_api_ui/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230618125818_remove_status_from_trace/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230620181114_restructure/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230622114254_new_oservations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230623172401_observation_add_level_and_status_message/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230626095337_external_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230705160335_add_created_updated_timestamps/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230706195819_add_completion_start_time/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230707132314_traces_project_id_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230707133415_user_add_email_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230710105741_added_indices/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230710114928_traces_add_user_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230710200816_scores_add_comment/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230711104810_traces_add_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230711110517_memberships_add_userid_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230711112235_fix_indices/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230717190411_users_feature_flags/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230720162550_tokens/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230720164603_migrate_tokens/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230720172051_tokens_non_null/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230721111651_drop_usage_json/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230731162154_score_value_float/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230803093326_add_release_and_version/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230809093636_remove_foreign_keys/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230809132331_add_project_id_to_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230810191452_traceid_nullable_on_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230810191453_project_id_not_null/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230814184705_add_viewer_membership_role/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230901155252_add_pricings_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230901155336_add_pricing_data/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230907204921_add_cron_jobs_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230907225603_projects_updated_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230907225604_api_keys_publishable_to_public/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230910164603_cron_add_state/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230912115644_add_trace_public_bool/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230918180320_add_indices/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230922030325_add_observation_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230924232619_datasets_init/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20230924232620_datasets_continued/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231004005909_add_parent_observation_id_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231005064433_add_release_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231009095917_add_ondelete_cascade/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231012161041_add_events_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231014131841_users_add_admin_flag/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231018130032_add_per_1000_chars_pricing/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231019094815_add_additional_secret_key_column/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231021182825_user_emails_all_lowercase/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231025153548_add_headers_to_events/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231030184329_events_add_index_on_projectid/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231104004529_scores_add_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231104005403_fkey_indicies/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231106213824_add_openai_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231110012457_observation_created_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231110012829_observation_created_at_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231112095703_observations_add_unique_constraint/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231116005353_scores_unique_id_projectid/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231119171939_cron_add_job_started_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231119171940_bookmarked/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231129013314_invites/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231130003317_trace_session_input_output/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231204223505_add_unit_to_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231223230007_cloud_config/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231223230008_accounts_add_cols_azure_ad_auth/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20231230151856_add_prompt_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240103135918_add_pricings/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240104210051_add_model_indices/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240104210052_add_model_indices_pricing/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240105010215_add_tags_in_traces/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240105170551_index_tags_in_traces/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240106195340_drop_dataset_status/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240111152124_add_gpt_35_pricing/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240117151938_traces_remove_unique_id_external/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240117165747_add_cost_to_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240118204639_add_models_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240118204936_add_internal_model/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240118204937_add_observations_view/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240118235424_add_index_to_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240119140941_add_tokenizer_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240119164147_make_model_params_nullable/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240119164148_add_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240124140443_session_composite_key/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240124164148_correct_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240126184148_new_models copy/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240130100110_usage_unit_nullable/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240130160110_claude_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240131184148_add_finetuned_and_vertex_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240203184148_update_pricing/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240212175433_add_audit_log_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240213124148_update_openai_pricing/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240214232619_prompts_add_indicies/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240215224148_update_openai_pricing/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240215234937_fix_observations_view/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240219162415_add_prompt_config/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240226165118_add_observations_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240226182815_add_model_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240226183642_add_observations_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240226202040_add_observations_trace_id_project_id_start_time_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240226202041_add_observations_trace_id_project_id_type_start_time_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240226203642_rewrite_observations_view/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240227112101_index_prompt_id_in_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240228103642_observations_view_cte/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240228123642_observations_view_fix/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240304123642_traces_view/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240304123642_traces_view_improvement/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240304222519_scores_add_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240305095119_add_observations_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240305100713_traces_add_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240307090110_claude_model_three/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240307185543_score_add_source_nullable/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240307185544_score_add_name_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240307185725_backfill_score_source/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240312195727_score_source_drop_default/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240314090110_claude_model/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240325211959_remove_example_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240325212245_dataset_runs_add_metadata/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240326114211_dataset_run_item_bind_to_trace/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240326114337_dataset_run_item_backfill_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240326115136_dataset_run_item_traceid_non_null/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240326115424_dataset_run_item_index_trace/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240328065738_dataset_item_input_nullable/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240404203640_dataset_item_source_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240404210315_dataset_add_descriptions/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240404232317_dataset_items_backfill_source_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240405124810_prompt_to_json/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240408133037_add_objects_for_evals/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240408134328_prompt_table_add_tags/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240408134330_prompt_table_add_index_to_tags/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240411134330_model_updates/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240411194142_update_job_config_status/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240411224142_update_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240414203636_ee_add_sso_configs/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240415235737_index_models_model_name/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240416173813_add_internal_model_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240417102742_metadata_on_dataset_and_dataset_item/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240419152924_posthog_integration_settings/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240420134232_posthog_integration_created_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240423174013_update_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240423192655_add_llm_api_keys/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240424150909_add_job_execution_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240429124411_add_prompt_version_labels/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240429194411_add_latest_prompt_tag/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240503125742_traces_add_createdat_updatedat/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240503130335_traces_index_created_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240503130520_traces_index_updated_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240508132621_scores_add_project_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240508132735_scores_add_projectid_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240508132736_scores_backfill_project_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240512151529_rename_memberships_to_project_memberships/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240512155020_rename_enum_membership_role_to_project_role/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240512155021_add_pricing_gpt4o/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240512155021_scores_drop_fk_on_traces_and_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240512155022_scores_non_null_and_add_fk_project_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240513082203_scores_unique_id_and_projectid_instead_of_id_and_traceid/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240513082204_scores_unique_id_and_projectid_instead_of_id_and_traceid_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240513082205_observations_view_add_time_to_first_token/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240522081254_scores_add_author_user_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240522095738_scores_add_author_user_id_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240523142425_score_config_add_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240523142524_scores_add_config_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240523142610_scores_add_fk_scores_config_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524154058_scores_source_enum_add_annotation/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524156058_scores_source_backfill_annotation_for_review/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524165931_scores_source_enum_drop_review/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524190433_job_executions_add_fk_index_config_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524190434_job_executions_add_fk_index_score_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524190435_job_executions_add_fk_index_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240524190436_job_executions_index_created_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214726_add_cursor_new_columns_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214727_add_cursor_new_columns_scores/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_01/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_02/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_03/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_04/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_05/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_06/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_07/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_08/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_09/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_10/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_11/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_12/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_13/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_14/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_15/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_16/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_17/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240528214728_add_cursor_index_18/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240603212024_dataset_items_add_index_source_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240604133338_scores_add_index_name/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240604133339_score_data_type_add_boolean/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240606093356_drop_unused_pricings_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240606133011_remove_trace_fkey_datasetrunitems/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240607090858_pricings_add_latest_gemini_models/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240607212419_model_price_anthropic_via_google_vertex/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240611105521_llm_api_keys_custom_endpoints/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240611113517_backfill_manual_score_configs/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240612101858_add_index_observations_project_id_prompt_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240617094803_observations_remove_prompt_fk_constraint/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618134129_add_batch_exports_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164950_drop_observations_parent_observation_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164951_drop_observations_updated_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164952_drop_scores_updated_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164953_drop_traces_external_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164954_drop_traces_release_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164955_drop_traces_updated_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240618164956_create_traces_project_id_timestamp_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240624133412_models_add_anthropic_3_5_sonnet/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240625103957_observations_add_calculated_cost_columns/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240625103958_fix_model_match_gpt4_vision/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240703214747_models_anthropic_aws_bedrock/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240704103900_observations_view_read_from_calculated/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240704103901_scores_make_value_optional/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240705152639_traces_view_add_created_at_updated_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240705154048_observation_view_add_created_at_updated_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240710114043_score_configs_drop_empty_categories_array_for_numeric_scores/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240710114044_add_pricing_gpt4o_mini/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240718004923_datasets_tables_add_projectid_composite_key/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240718011733_dataset_runs_add_unique_dataset_id_project_id_name copy/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240718011734_dataset_runs_drop_unique_dataset_id_name/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240718011735_observation_view_add_prompt_name_and_version/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240807111358_models_add_openai_gpt_4o_2024_08_06/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240807111359_add_organizations_main_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240814223824_model_fix_text_embedding_3_large/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240814233029_dataset_items_drop_fkey_on_traces_and_observations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240815171916_add_comments/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240913095558_models_add_openai_o1_2024-09-12/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240913185822_account_add_refresh_token_expires_in/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183001_remove_covered_indexes_01/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183002_remove_covered_indexes_02/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183003_remove_covered_indexes_03/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183004_remove_covered_indexes_04/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183005_remove_covered_indexes_05/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183006_remove_covered_indexes_06/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183007_remove_covered_indexes_07/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183008_remove_covered_indexes_08/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183009_remove_covered_indexes_09/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183010_remove_covered_indexes_10/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183011_remove_covered_indexes_11/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183012_remove_covered_indexes_12/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183013_remove_covered_indexes_13/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183014_remove_covered_indexes_14/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183015_remove_covered_indexes_15/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20240917183016_remove_covered_indexes_16/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241009042557_auth_add_created_at_for_gitlab/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241009110720_scores_add_nullable_queue_id_column/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241009113245_add_annotation_queue/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241010120245_llm_keys_add_config/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241015110145_prompts_config_to_JSON/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241022110145_add_claude_sonnet_35/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241023110145_update_claude_sonnet_35/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241024100928_add_prices_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241024111800_add_background_migrations_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241024121500_add_generations_cost_backfill_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241024173000_add_traces_pg_to_ch_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241024173700_add_observations_pg_to_ch_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241024173800_add_scores_pg_to_ch_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241029130802_prices_drop_excess_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241104111600_background_migrations_add_state_column/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241105110900_add_claude_haiku_35/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241106122605_add_media_tables/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241114175010_job_executions_add_observation_dataset_item_cols/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241124115100_add_projects_deleted_at/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241125124029_add_chatgpt_4o_prices/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20241206115829_remove_trace_score_observation_constraints/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250108220721_add_queue_backup_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250109083346_drop_trace_tracesession_fk/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250116154613_add_billing_meter_backups/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250122152102_add_llm_api_keys_extra_headers/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250123103200_add_retention_days_to_projects/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250128144418_llm_adapter_rename_google_vertex_ai/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250128163035_add_nullable_commit_message_prompts/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250204180200_add_event_log_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250211102600_drop_event_log_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250211123300_drop_events_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250214173309_add_timescope_to_configs/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250220141500_add_environment_to_trace_sessions/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250221143400_drop_trace_view_observation_view/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250303144044_add_prompt_dependencies_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250310100328_add_api_key_to_audit_log/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250321102240_drop_queue_backup_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250324110557_add_blobstorage_integration_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250326180640_add_llm_tools_and_schemas_tables/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250401122159_add_prompt_protected_labels_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250402142320_add_blobstorage_integration_file_type/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250403153555_membership_invitations_no_duplicates/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250409154352_add_dashboard_data_model/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250410145712_add_organization_scoped_api_keys/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250420120553_add_organization_and_project_metadata/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250517173700_add_event_log_migration_background_migration.sql/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250517273700_add_table_view_presets.sql/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250519073249_add_trace_media_media_id_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250519073327_add_observation_media_media_id_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250519093327_media_add_index_project_id_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250519093328_media_relax_id_uniqueness_to_project_only/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250519145128_resize_dashboard_y_axis_components/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250520123737_add_single_aggregate_chart_type/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250522140357_remove_obsolete_observation_media_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250523100511_add_default_eval_model_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250523110540_modify_nullable_cols_eval_templates/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250523120545_add_nullable_job_template_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250529071241_make_blobstorage_integration_credentials_optional/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250604085536_add_histogram_chart_type/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250625_add_pivot_table_charttype/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250704170658_add_automations/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250709113103_add_blob_export_schedule_type/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250711105322_prices_add_project_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250711134738_add_patch_llm_tool_schema_audit_logs_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250714151410_add_trace_session_combined_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250714151410_remove_trace_session_created_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250714151410_remove_trace_session_project_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250714151410_remove_trace_session_updated_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250724114251_add_webhooks_datasets/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250724160133_add_session_object_type_annoation_queue_items/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250730100100_add_slack_integration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250731100100_add_dataset_run_items_pg_to_ch_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250731202005_add_trace_deletion_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250806100613_add_annotation_queue_assignment_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250808081624_add_surveys_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250814090100_remove_dataset_run_items_pg_to_ch_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250814100100_add_dataset_run_items_rmt_pg_to_ch_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143856_add_observation_types/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143857_optimize_job_execution_indices_drop_job_executions_created_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143858_optimize_job_execution_indices_drop_job_executions_job_configuration_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143859_optimize_job_execution_indices_drop_job_executions_job_input_trace_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143860_optimize_job_execution_indices_drop_job_executions_job_output_score_id_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143861_optimize_job_execution_indices_drop_job_executions_updated_at_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250820143862_optimize_job_execution_indices_create_job_executions_project_id_job_configuration_id_job_input_tr_idx/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250822135300_add_dashboard_filters/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250825100104_job_executions_add_input_trace_timestamp/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250925133604_organizations_add_ai_features_enabled/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20250930125453_job_executions_add_output_score_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251001161539_organization_cloud_billing_cycle_columns/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251002153814_add_backfill_billing_cycle_anchors_background_migration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251006173445_add_cloud_spend_alerts/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251006173446_optimize_cloud_spend_alerts_add_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251013134801_drop_atla_llm_keys/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251014161635_job_executions_add_execution_trace_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251024193002_add_mixpanel_integration/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251028143653_add_notification_preferences/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251028143654_add_notification_preferences_redundant_index/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251029000042_add_comment_reactions/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251029000045_add_comment_reaction_idx3/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251104091248_add_dataset_schema_enforcement/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251118153536_add_dataset_item_event_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251118162943_add_idx_dataset_item_events/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251126000000_add_comment_search_indexes/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251127105316_add_pricing_tiers/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251127181728_add_prices_index_on_pricing_tier_id/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251201095227_dataset_items_add_version_cols/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251204213345_add_github_dispatch_action_type/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251208121203_dataset_run_items_drop_fk_dataset_items/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251210130559_add_batch_action_table/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251210133946_dataset_items_create_idx_id_project_id_valid_from/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41   └─ 20251211204006_dataset_items_switch_pk/
+2025-12-15 23:42:41     └─ migration.sql
+2025-12-15 23:42:41       
+2025-12-15 23:42:41 All migrations have been successfully applied.
+2025-12-15 23:42:41 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:42:41 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:42:41 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:42:41 Exiting...
+2025-12-15 23:42:45 Script executed successfully.
+2025-12-15 23:42:47 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:42:47 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:42:48 
+2025-12-15 23:42:48 363 migrations found in prisma/migrations
+2025-12-15 23:42:48 
+2025-12-15 23:42:49 
+2025-12-15 23:42:49 No pending migrations to apply.
+2025-12-15 23:42:49 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:42:49 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:42:49 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:42:49 Exiting...
+2025-12-15 23:42:53 Script executed successfully.
+2025-12-15 23:42:56 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:42:56 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:42:57 
+2025-12-15 23:42:57 363 migrations found in prisma/migrations
+2025-12-15 23:42:57 
+2025-12-15 23:42:57 
+2025-12-15 23:42:57 No pending migrations to apply.
+2025-12-15 23:42:58 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:42:58 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:42:58 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:42:58 Exiting...
+2025-12-15 23:43:03 Script executed successfully.
+2025-12-15 23:43:06 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:43:06 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:43:06 
+2025-12-15 23:43:06 363 migrations found in prisma/migrations
+2025-12-15 23:43:06 
+2025-12-15 23:43:07 
+2025-12-15 23:43:07 No pending migrations to apply.
+2025-12-15 23:43:07 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:43:07 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:43:07 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:43:07 Exiting...
+2025-12-15 23:43:12 Script executed successfully.
+2025-12-15 23:43:17 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:43:17 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:43:18 
+2025-12-15 23:43:18 363 migrations found in prisma/migrations
+2025-12-15 23:43:18 
+2025-12-15 23:43:19 
+2025-12-15 23:43:19 No pending migrations to apply.
+2025-12-15 23:43:19 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:43:19 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:43:19 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:43:19 Exiting...
+2025-12-15 23:43:25 Script executed successfully.
+2025-12-15 23:43:28 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:43:28 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:43:29 
+2025-12-15 23:43:29 363 migrations found in prisma/migrations
+2025-12-15 23:43:29 
+2025-12-15 23:43:29 
+2025-12-15 23:43:29 No pending migrations to apply.
+2025-12-15 23:43:29 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:43:29 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:43:29 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:43:29 Exiting...
+2025-12-15 23:43:34 Script executed successfully.
+2025-12-15 23:43:37 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:43:37 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:43:38 
+2025-12-15 23:43:38 363 migrations found in prisma/migrations
+2025-12-15 23:43:38 
+2025-12-15 23:43:39 
+2025-12-15 23:43:39 No pending migrations to apply.
+2025-12-15 23:43:39 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:43:39 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:43:39 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:43:39 Exiting...
+2025-12-15 23:43:43 Script executed successfully.
+2025-12-15 23:43:45 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:43:45 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:43:46 
+2025-12-15 23:43:46 363 migrations found in prisma/migrations
+2025-12-15 23:43:46 
+2025-12-15 23:43:47 
+2025-12-15 23:43:47 No pending migrations to apply.
+2025-12-15 23:43:47 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:43:47 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:43:47 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:43:47 Exiting...
+2025-12-15 23:43:51 Script executed successfully.
+2025-12-15 23:43:54 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:43:54 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:43:54 
+2025-12-15 23:43:54 363 migrations found in prisma/migrations
+2025-12-15 23:43:54 
+2025-12-15 23:43:55 
+2025-12-15 23:43:55 No pending migrations to apply.
+2025-12-15 23:43:55 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:43:55 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:43:55 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:43:55 Exiting...
+2025-12-15 23:44:00 Script executed successfully.
+2025-12-15 23:44:03 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:44:03 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:44:04 
+2025-12-15 23:44:04 363 migrations found in prisma/migrations
+2025-12-15 23:44:04 
+2025-12-15 23:44:04 
+2025-12-15 23:44:04 No pending migrations to apply.
+2025-12-15 23:44:04 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:44:04 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:44:04 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:44:04 Exiting...
+2025-12-15 23:44:11 Script executed successfully.
+2025-12-15 23:44:14 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:44:14 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:42:49 ┌─────────────────────────────────────────────────────────┐
+2025-12-15 23:42:49 │  Update available 6.17.1 -> 7.1.0                       │
+2025-12-15 23:42:49 │                                                         │
+2025-12-15 23:42:49 │  This is a major update - please follow the guide at    │
+2025-12-15 23:42:49 │  https://pris.ly/d/major-version-upgrade                │
+2025-12-15 23:42:49 │                                                         │
+2025-12-15 23:42:49 │  Run the following to update                            │
+2025-12-15 23:42:49 │    npm i -g prisma@latest                               │
+2025-12-15 23:42:49 │    npm i @prisma/client@latest                          │
+2025-12-15 23:42:49 └─────────────────────────────────────────────────────────┘
+2025-12-15 23:44:14 
+2025-12-15 23:44:14 363 migrations found in prisma/migrations
+2025-12-15 23:44:14 
+2025-12-15 23:44:15 
+2025-12-15 23:44:15 No pending migrations to apply.
+2025-12-15 23:44:15 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:44:15 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:44:15 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:44:15 Exiting...
+2025-12-15 23:44:25 Script executed successfully.
+2025-12-15 23:44:28 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:44:28 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:44:28 
+2025-12-15 23:44:28 363 migrations found in prisma/migrations
+2025-12-15 23:44:28 
+2025-12-15 23:44:29 
+2025-12-15 23:44:29 No pending migrations to apply.
+2025-12-15 23:44:29 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:44:29 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:44:29 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:44:29 Exiting...
+2025-12-15 23:44:45 Script executed successfully.
+2025-12-15 23:44:48 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:44:48 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:44:49 
+2025-12-15 23:44:49 363 migrations found in prisma/migrations
+2025-12-15 23:44:49 
+2025-12-15 23:44:49 
+2025-12-15 23:44:49 No pending migrations to apply.
+2025-12-15 23:44:49 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:44:49 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:44:49 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:44:49 Exiting...
+2025-12-15 23:45:18 Script executed successfully.
+2025-12-15 23:45:21 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:45:21 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:45:22 
+2025-12-15 23:45:22 363 migrations found in prisma/migrations
+2025-12-15 23:45:22 
+2025-12-15 23:45:22 
+2025-12-15 23:45:22 No pending migrations to apply.
+2025-12-15 23:45:22 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:45:22 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:45:22 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:45:22 Exiting...
+2025-12-15 23:46:17 Script executed successfully.
+2025-12-15 23:46:20 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:46:20 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:46:20 
+2025-12-15 23:46:20 363 migrations found in prisma/migrations
+2025-12-15 23:46:20 
+2025-12-15 23:46:21 
+2025-12-15 23:46:21 No pending migrations to apply.
+2025-12-15 23:46:21 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:46:21 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:46:21 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:46:21 Exiting...
+2025-12-15 23:47:25 Script executed successfully.
+2025-12-15 23:47:27 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:47:27 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:47:28 
+2025-12-15 23:47:28 363 migrations found in prisma/migrations
+2025-12-15 23:47:28 
+2025-12-15 23:47:29 
+2025-12-15 23:47:29 No pending migrations to apply.
+2025-12-15 23:47:29 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:47:29 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:47:29 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:47:29 Exiting...
+2025-12-15 23:48:32 Script executed successfully.
+2025-12-15 23:48:35 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:48:36 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:48:36 
+2025-12-15 23:48:36 363 migrations found in prisma/migrations
+2025-12-15 23:48:36 
+2025-12-15 23:48:37 
+2025-12-15 23:48:37 No pending migrations to apply.
+2025-12-15 23:48:37 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:48:37 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:48:37 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:48:37 Exiting...
+2025-12-15 23:49:41 Script executed successfully.
+2025-12-15 23:49:44 Prisma schema loaded from packages/shared/prisma/schema.prisma
+2025-12-15 23:49:44 Datasource "db": PostgreSQL database "langfuse", schema "public" at "postgres:5432"
+2025-12-15 23:49:44 
+2025-12-15 23:49:44 363 migrations found in prisma/migrations
+2025-12-15 23:49:44 
+2025-12-15 23:49:45 
+2025-12-15 23:49:45 No pending migrations to apply.
+2025-12-15 23:49:45 Error: CLICKHOUSE_MIGRATION_URL is not configured.
+2025-12-15 23:49:45 Please set CLICKHOUSE_MIGRATION_URL in your environment variables.
+2025-12-15 23:49:45 Applying clickhouse migrations failed. This is mostly caused by the database being unavailable.
+2025-12-15 23:49:45 Exiting...

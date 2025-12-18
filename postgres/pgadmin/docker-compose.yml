@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  pgadmin:
+    image: dpage/pgadmin4:snapshot
+    container_name: pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: tamilzarasus@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    ports:
+      - "5050:80"
+    restart: unless-stopped
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  pgadmin_data:
