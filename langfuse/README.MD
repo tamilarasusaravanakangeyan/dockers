@@ -1,3 +1,9 @@
+docker volume ls | findstr langfuse
+
+docker volume rm langfuse_postgres_data
+
+docker exec langflow python -c "import urllib.request; print(urllib.request.urlopen('http://host.docker.internal:3000').getcode())"
+
 Below is the **cleanest, production-accurate way to install Langfuse on Windows**, followed by alternatives and common pitfalls.
 (I’ll assume **Windows 10/11**, PowerShell, and enterprise-grade setup.)
 
