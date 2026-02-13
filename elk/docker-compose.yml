@@ -1,0 +1,127 @@
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+    container_name: elasticsearch
+    environment:
+      - node.name=es01
+      - cluster.name=${CLUSTER_NAME}
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    mem_limit: 3g
+    restart: always
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -s http://localhost:9200/_cluster/health?pretty | grep status || exit 1",
+        ]
+      interval: 10s
+      timeout: 10s
+      retries: 120
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
+    container_name: kibana
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - XPACK_FLEET_ENABLED=true
+      - SERVER_PUBLICBASEURL=http://localhost:5601
+      - XPACK_SECURITY_ENCRYPTIONKEY=something-at-least-32-characters-long-123
+      - XPACK_ENCRYPTED_SAVED_OBJECTS_ENCRYPTIONKEY=something-at-least-32-characters-long-456
+      - XPACK_REPORTING_ENCRYPTIONKEY=something-at-least-32-characters-long-789
+    ports:
+      - "5601:5601"
+    mem_limit: 2g
+    restart: always
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -s -I http://localhost:5601 | grep -q 'HTTP/1.1 302 Found' || exit 1",
+        ]
+      interval: 10s
+      timeout: 10s
+      retries: 24
+
+  fleet-server:
+    image: docker.elastic.co/beats/elastic-agent:${STACK_VERSION}
+    container_name: fleet-server
+    depends_on:
+      kibana:
+        condition: service_healthy
+    environment:
+      - FLEET_SERVER_ENABLE=true
+      - FLEET_SERVER_ELASTICSEARCH_HOST=http://elasticsearch:9200
+      - FLEET_SERVER_ELASTICSEARCH_USERNAME=elastic
+      - FLEET_SERVER_ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+      - FLEET_SERVER_POLICY_ID=fleet-server-policy
+      - FLEET_SERVER_HOST=0.0.0.0
+      - FLEET_SERVER_PORT=8220
+      - KIBANA_HOST=http://kibana:5601
+      - KIBANA_USERNAME=elastic
+      - KIBANA_PASSWORD=${ELASTIC_PASSWORD}
+    ports:
+      - "8220:8220"
+    restart: always
+
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:${STACK_VERSION}
+    container_name: apm-server
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
+    ports:
+      - "8200:8200" # APM endpoint
+      - "4317:4317" # OTLP grpc
+      - "4318:4318" # OTLP http
+    volumes:
+      - ./apm-server.yml:/usr/share/apm-server/apm-server.yml:ro
+    command: >
+      apm-server -e
+        -E apm-server.host=0.0.0.0:8200
+        -E apm-server.rum.enabled=false
+        -E apm-server.auth.anonymous.enabled=true
+        -E apm-server.auth.anonymous.allow_service=*
+        -E output.elasticsearch.hosts=["http://elasticsearch:9200"]
+        -E output.elasticsearch.username=elastic
+        -E output.elasticsearch.password=${ELASTIC_PASSWORD}
+        -E apm-server.instrumentation.enabled=false
+        -E apm-server.otlp.enabled=true
+        -E apm-server.otlp.grpc.enabled=true
+        -E apm-server.otlp.grpc.host=0.0.0.0:4317
+        -E apm-server.otlp.http.enabled=true
+        -E apm-server.otlp.http.host=0.0.0.0:4318
+    restart: always
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.94.0
+    container_name: otel-collector
+    depends_on:
+      - apm-server
+    ports:
+      - "4319:4317"
+      - "4320:4318"
+    volumes:
+      - ./otel-config.yaml:/etc/otel-config.yaml
+    command: ["--config=/etc/otel-config.yaml"]
+    restart: always
+
+volumes:
+  esdata:

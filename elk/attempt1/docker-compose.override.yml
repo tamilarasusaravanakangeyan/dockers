@@ -1,0 +1,5 @@
+services:
+  kibana:
+    environment:
+      XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY: change_this_long_key_please_change_1234567890abcdefgh
+      XPACK_SECURITY_ENCRYPTIONKEY: change_this_other_long_key_please_change_0987654321ijklmnop

@@ -1,0 +1,30 @@
+apm-server:
+  host: "0.0.0.0:8200"
+  rum:
+    enabled: false
+
+  # Enable OpenTelemetry
+  auth:
+    anonymous:
+      enabled: true
+      allow_agent: ["rum-js", "js-base", "iOS/swift"]
+      allow_service: ["*"]
+  
+  # Enable OTLP receivers
+  otlp:
+    enabled: true
+    grpc:
+      enabled: true
+      host: "0.0.0.0:4317"
+    http:
+      enabled: true
+      host: "0.0.0.0:4318"
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  username: "elastic"
+  password: "ElasticStrong123!"
+
+logging.level: info
+logging.to_files: false
+logging.to_stderr: true

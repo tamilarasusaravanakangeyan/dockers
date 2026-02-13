@@ -1,0 +1,23 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+exporters:
+  logging:
+    loglevel: debug
+  otlphttp:
+    endpoint: "http://apm-server:8200"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [logging, otlphttp]
+    metrics:
+      receivers: [otlp]
+      exporters: [logging, otlphttp]
+    logs:
+      receivers: [otlp]
+      exporters: [logging, otlphttp]

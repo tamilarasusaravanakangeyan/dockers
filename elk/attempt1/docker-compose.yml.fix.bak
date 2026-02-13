@@ -1,0 +1,43 @@
+﻿version:  3.9
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+    environment:
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=changeme
+      - xpack.security.enabled=true
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    ports:
+      - 9200:9200
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.1
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+      - ELASTICSEARCH_SSL_VERIFICATIONMODE=none
+    ports:
+      - 5601:5601
+
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:8.12.1
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=https://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=changeme
+    ports:
+      - 8200:8200
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.82.0
+    ports:
+      - 4317:4317
+      - 4318:4318
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml:ro
