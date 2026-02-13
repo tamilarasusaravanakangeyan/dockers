@@ -1,0 +1,26 @@
+services:
+  langflow:
+    image: langflowai/langflow:1.7.1
+    container_name: langflow
+    # depends_on:
+    #   postgres:
+    #     condition: service_healthy
+    restart: always
+    ports:
+      - "7860:7860"
+    environment:
+      - DO_NOT_TRACK=false
+      - LANGFUSE_SECRET_KEY=sk-lf-d0d4f00b-2c99-4a0e-946a-9aa547c22643
+      - LANGFUSE_PUBLIC_KEY=pk-lf-bd9a3c23-c24e-48bc-81c3-c891ba956415
+      - LANGFUSE_HOST=http://host.docker.internal:3000
+      - LANGFLOW_AUTO_LOGIN=true
+      - LANGFLOW_WORKERS=1
+    user: "0:0" # Run as root to avoid permission issues
+    volumes:
+      - langflow_data:/app/langflow
+    entrypoint: >
+      bash -c "python -m langflow run --host 0.0.0.0"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+volumes:
+  langflow_data:
