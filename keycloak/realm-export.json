@@ -1,0 +1,282 @@
+{
+  "realm": "medflight",
+  "displayName": "MedFlight Workflow",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "editUsernameAllowed": false,
+  "bruteForceProtected": true,
+
+  "accessTokenLifespan": 300,
+  "ssoSessionIdleTimeout": 1800,
+  "ssoSessionMaxLifespan": 36000,
+  "offlineSessionIdleTimeout": 2592000,
+  "refreshTokenMaxReuse": 0,
+
+  "roles": {
+    "realm": [
+      {
+        "name": "revenue-management",
+        "description": "Full access — submit, track, approve dashboard, admin config, overrides"
+      },
+      {
+        "name": "dept-user",
+        "description": "Read-only access to requests assigned to their department"
+      },
+      {
+        "name": "dept-system-callback",
+        "description": "Machine role — used by external dept systems posting approval callbacks"
+      },
+      {
+        "name": "workflow-internal",
+        "description": "Machine role — used by WorkflowApi calling CoreApi audit endpoints"
+      }
+    ]
+  },
+
+  "clients": [
+
+    {
+      "clientId": "medflight-spa",
+      "name": "MedFlight Angular SPA",
+      "description": "Angular 20 SPA — Revenue Management portal. Public client with PKCE.",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "protocol": "openid-connect",
+      "rootUrl": "http://localhost:4200",
+      "baseUrl": "http://localhost:4200",
+      "redirectUris": [
+        "http://localhost:4200/*",
+        "https://medflight.airline.com/*"
+      ],
+      "webOrigins": [
+        "http://localhost:4200",
+        "https://medflight.airline.com"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "access.token.lifespan": "300",
+        "use.refresh.tokens": "true",
+        "client.session.idle.timeout": "1800",
+        "client.session.max.lifespan": "36000"
+      },
+      "protocolMappers": [
+        {
+          "name": "realm-roles-mapper",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "roles",
+            "jsonType.label": "String",
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true"
+          }
+        },
+        {
+          "name": "email-mapper",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "email",
+            "user.attribute": "email",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true"
+          }
+        }
+      ]
+    },
+
+    {
+      "clientId": "medflight-workflow",
+      "name": "MedFlight Workflow API",
+      "description": "WorkflowApi — bearer-only resource server. Validates JWTs; does not issue tokens.",
+      "enabled": true,
+      "publicClient": false,
+      "bearerOnly": true,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "protocol": "openid-connect"
+    },
+
+    {
+      "clientId": "medflight-core",
+      "name": "MedFlight Core API",
+      "description": "CoreApi — bearer-only resource server. Validates JWTs; does not issue tokens.",
+      "enabled": true,
+      "publicClient": false,
+      "bearerOnly": true,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "protocol": "openid-connect"
+    },
+
+    {
+      "clientId": "medflight-workflow-service",
+      "name": "MedFlight WorkflowApi → CoreApi (M2M)",
+      "description": "Confidential client used by WorkflowApi to call CoreApi audit endpoints using client_credentials flow. Not a user-facing client.",
+      "enabled": true,
+      "publicClient": false,
+      "bearerOnly": false,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true,
+      "protocol": "openid-connect",
+      "secret": "REPLACE_WITH_STRONG_SECRET_1",
+      "attributes": {
+        "access.token.lifespan": "60",
+        "client_credentials.use_refresh_token": "false"
+      },
+      "protocolMappers": [
+        {
+          "name": "workflow-service-role-mapper",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "roles",
+            "jsonType.label": "String",
+            "multivalued": "true",
+            "userinfo.token.claim": "false",
+            "id.token.claim": "false",
+            "access.token.claim": "true"
+          }
+        }
+      ]
+    },
+
+    {
+      "clientId": "medflight-external-system",
+      "name": "External Department System (M2M)",
+      "description": "Confidential client for external dept systems (e.g. Cabin Maintenance, Line Maintenance) to POST approval callbacks to WorkflowApi using client_credentials flow.",
+      "enabled": true,
+      "publicClient": false,
+      "bearerOnly": false,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true,
+      "protocol": "openid-connect",
+      "secret": "REPLACE_WITH_STRONG_SECRET_2",
+      "attributes": {
+        "access.token.lifespan": "60",
+        "client_credentials.use_refresh_token": "false"
+      },
+      "protocolMappers": [
+        {
+          "name": "ext-system-role-mapper",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "roles",
+            "jsonType.label": "String",
+            "multivalued": "true",
+            "userinfo.token.claim": "false",
+            "id.token.claim": "false",
+            "access.token.claim": "true"
+          }
+        }
+      ]
+    }
+
+  ],
+
+  "users": [
+    {
+      "username": "revmgr",
+      "email": "revmgr@airline.com",
+      "firstName": "Revenue",
+      "lastName": "Manager",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        { "type": "password", "value": "Test1234!", "temporary": false }
+      ],
+      "realmRoles": ["revenue-management"]
+    },
+    {
+      "username": "deptuser",
+      "email": "deptuser@airline.com",
+      "firstName": "Dept",
+      "lastName": "User",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        { "type": "password", "value": "Test1234!", "temporary": false }
+      ],
+      "realmRoles": ["dept-user"]
+    },
+    {
+      "username": "medicalapprover",
+      "email": "medical@airline.com",
+      "firstName": "Medical",
+      "lastName": "Approver",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        { "type": "password", "value": "Test1234!", "temporary": false }
+      ],
+      "realmRoles": ["dept-user"]
+    },
+    {
+      "username": "service-account-medflight-external-system",
+      "enabled": true,
+      "serviceAccountClientId": "medflight-external-system",
+      "realmRoles": ["default-roles-medflight", "dept-system-callback"]
+    },
+    {
+      "username": "service-account-medflight-workflow-service",
+      "enabled": true,
+      "serviceAccountClientId": "medflight-workflow-service",
+      "realmRoles": ["default-roles-medflight", "workflow-internal"]
+    }
+  ],
+
+  "passwordPolicy": "length(8) and upperCase(1) and digits(1) and notUsername",
+
+  "browserSecurityHeaders": {
+    "contentSecurityPolicy": "frame-src 'self'; frame-ancestors 'self' http://localhost:4200 https://medflight.airline.com; object-src 'none';",
+    "xContentTypeOptions": "nosniff",
+    "xRobotsTag": "none",
+    "xFrameOptions": "SAMEORIGIN",
+    "xXSSProtection": "1; mode=block",
+    "strictTransportSecurity": "max-age=31536000; includeSubDomains"
+  },
+
+  "smtpServer": {
+    "host": "",
+    "port": "587",
+    "from": "keycloak@airline.com",
+    "fromDisplayName": "MedFlight Auth",
+    "starttls": "true",
+    "auth": "true",
+    "user": "",
+    "password": ""
+  },
+
+  "eventsEnabled": true,
+  "eventsListeners": ["jboss-logging"],
+  "enabledEventTypes": [
+    "LOGIN", "LOGIN_ERROR", "LOGOUT", "TOKEN_EXCHANGE",
+    "CLIENT_LOGIN", "CLIENT_LOGIN_ERROR"
+  ],
+  "adminEventsEnabled": true,
+  "adminEventsDetailsEnabled": true
+}
