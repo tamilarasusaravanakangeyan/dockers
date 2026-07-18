@@ -1,0 +1,3 @@
+CREATE ROLE myrole
+WITH LOGIN PASSWORD 'postgres';
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myrole;

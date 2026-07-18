@@ -1,5 +1,4 @@
 version: "3.8"
-
 services:
   db:
     image: postgres:16 # Specifies the PostgreSQL image and version
@@ -10,6 +9,7 @@ services:
       - "5432:5432" # Maps host port 5432 to container port 5432
     volumes:
       - pgdata:/var/lib/postgresql/data # Persists data in a named volume
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Initialization script
 
 volumes:
   pgdata: # Defines the named volume for data persistence

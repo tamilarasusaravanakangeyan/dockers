@@ -2,19 +2,19 @@
 
 ```
 
-docker exec -it bb1385096234 /opt/kafka/bin/kafka-topics.sh --create --topic new_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+docker exec -it 1e47ea79b3fc /opt/kafka/bin/kafka-topics.sh --create --topic new_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 
 ### To list topics
 
 ```
-docker exec -it bb1385096234 /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+docker exec -it 1e47ea79b3fc /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
 
 ### To send message to topic
 
 ```
-docker exec -it bb1385096234 /bin/bash
+docker exec -it 1e47ea79b3fc /bin/bash
 ```
 
 ```
@@ -24,7 +24,7 @@ docker exec -it bb1385096234 /bin/bash
 ### To read message from topic
 
 ```
-docker exec -it bb1385096234 /bin/bash
+docker exec -it 1e47ea79b3fc /bin/bash
 ```
 
 ```
