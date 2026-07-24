@@ -27,36 +27,12 @@ services:
       timeout: 10s
       retries: 120
 
-  setup:
-    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
-    container_name: elk-setup
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
-    environment:
-      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
-      - KIBANA_PASSWORD=${KIBANA_PASSWORD}
-    command:
-      - bash
-      - -c
-      - >-
-        echo "Setting kibana_system password..." &&
-        curl -s -f -X POST
-        -u elastic:$$ELASTIC_PASSWORD
-        -H "Content-Type: application/json"
-        http://elasticsearch:9200/_security/user/kibana_system/_password
-        -d "{\"password\": \"$$KIBANA_PASSWORD\"}" &&
-        echo " kibana_system password set."
-    restart: "no"
-
   kibana:
     image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
     container_name: kibana
     depends_on:
       elasticsearch:
         condition: service_healthy
-      setup:
-        condition: service_completed_successfully
     environment:
       - ELASTICSEARCH_USERNAME=kibana_system
       - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
@@ -78,7 +54,7 @@ services:
         ]
       interval: 10s
       timeout: 10s
-      retries: 120
+      retries: 24
 
   fleet-server:
     image: docker.elastic.co/beats/elastic-agent:${STACK_VERSION}
